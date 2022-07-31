@@ -1,0 +1,24 @@
+{
+	"name": "advisor",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev -p 3002",
+		"build": "next build",
+		"build:analyze": "cross-env ANALYZE=true next build",
+		"start": "next start",
+		"svgr": "svgr --icon --typescript --title-prop --ignore-existing -d components/icons svg-icons ",
+		"lint": "pnpm run lint:eslint & pnpm run lint:tsc",
+		"lint:eslint": "next lint",
+		"lint:tsc": "tsc --noEmit",
+		"prettier:all": "prettier --write **/*.{ts,tsx,js,scss,css,json,mdx}",
+		"test": "jest",
+		"test:generate-output": "jest --json --outputFile=.jest-test-results.json"
+	},
+	"dependencies": {
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"components": "workspace:components@*"
+	},
+	"devDependencies": {}
+}
