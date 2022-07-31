@@ -1,0 +1,16 @@
+export enum Breakpoint {
+	'XXL' = '(min-width: 1400px)',
+	'XL' = '(min-width: 1200px)',
+	'LG' = '(min-width: 992px)',
+	'MD' = '(min-width: 768px)',
+	'SM' = '(min-width: 576px)',
+	'XS' = '(min-width: 536px)',
+	'XXS' = '(min-width: 416px)',
+	'MAX_XXL' = '(max-width: 1400px)',
+	'MAX_XL' = '(max-width: 1200px)',
+	'MAX_LG' = '(max-width: 992px)',
+	'MAX_MD' = '(max-width: 768px)',
+	'MAX_SM' = '(max-width: 576px)',
+	'MAX_XS' = '(max-width: 536px)',
+	'MAX_XXS' = '(max-width: 416px)',
+}

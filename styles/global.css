@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.border-input {
+		@apply border border-solid border-gray;
+	}
+	.border-input-dashed {
+		@apply border border-dashed border-gray;
+	}
+	.border-primary {
+		@apply border border-solid border-primary;
+	}
+	.border-secondary {
+		@apply border border-solid border-secondary;
+	}
+	.border-white {
+		@apply border border-solid border-white;
+	}
+	.fullCenterFlex {
+		@apply flex items-center justify-center;
+	}
+	.bg-backdrop {
+		@apply bg-gradient-to-r from-gray-backdrop to-transparent;
+	}
+}
+
+a {
+	display: block;
+	margin: 10px;
+	color: blue;
+}
