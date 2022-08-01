@@ -16,9 +16,11 @@
 		"test:generate-output": "jest --json --outputFile=.jest-test-results.json"
 	},
 	"dependencies": {
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"components": "workspace:components@*"
+		"components": "workspace:components@*",
+		"api": "workspace:api@*"
 	},
-	"devDependencies": {}
+	"devDependencies": {},
+	"msw": {
+		"workerDirectory": "public"
+	}
 }

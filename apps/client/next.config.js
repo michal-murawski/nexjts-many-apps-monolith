@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const withPlugins = require('next-compose-plugins');
-const withTM = require('next-transpile-modules')(['components']); // pass the modules you would like to see transpiled
+const withTM = require('next-transpile-modules')(['components', 'api']); // pass the modules you would like to see transpiled
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true',

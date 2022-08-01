@@ -22,6 +22,7 @@
 		"clsx": "1.2.1",
 		"cssnano": "5.1.12",
 		"lodash": "4.17.21",
+		"msw": "^0.44.2",
 		"next": "12.2.1",
 		"next-compose-plugins": "2.2.1",
 		"next-transpile-modules": "^9.0.0",

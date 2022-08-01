@@ -4,6 +4,10 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import 'styles/global.css';
 import { useState } from 'react';
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+	require('../mocks/msw');
+}
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
 	const [queryClient] = useState(() => new QueryClient());
