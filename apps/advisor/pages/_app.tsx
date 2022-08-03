@@ -1,8 +1,11 @@
 import type { AppProps } from 'next/app';
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import 'styles/global.css';
 import { useState } from 'react';
+
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+	require('../mocks/msw');
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
@@ -11,11 +14,8 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Hydrate state={pageProps.dehydratedState}>
-				<div suppressHydrationWarning>
-					<Component {...pageProps} />
-				</div>
+				<div suppressHydrationWarning>{typeof window === 'undefined' ? null : <Component {...pageProps} />}</div>
 			</Hydrate>
-			<ReactQueryDevtools />
 		</QueryClientProvider>
 	);
 };

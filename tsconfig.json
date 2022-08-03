@@ -6,7 +6,7 @@
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
-		"types": ["node", "jest"],
+		"types": ["node"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"allowSyntheticDefaultImports": true,
@@ -23,6 +23,6 @@
 		"noFallthroughCasesInSwitch": true,
 		"outDir": "./dist"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
 }

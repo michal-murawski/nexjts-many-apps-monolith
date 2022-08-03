@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules')(['components', 'api']); // pass the modules you would like to see transpiled
+const withPreact = require('next-plugin-preact');
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true',
@@ -9,14 +10,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	swcMinify: true,
-	async rewrites() {
-		return [
-			{
-				source: '/app/:any*',
-				destination: '/app',
-			},
-		];
-	},
 	reactStrictMode: true,
 	webpack: (config, options) => {
 		// Important: return the modified config!
@@ -39,4 +32,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = withPlugins([withTM, withBundleAnalyzer], nextConfig);
+module.exports = withPlugins([withPreact, withTM, withBundleAnalyzer], nextConfig);

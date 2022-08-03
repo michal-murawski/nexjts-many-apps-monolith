@@ -9,9 +9,6 @@
 		"lint:tsc": "tsc --noEmit",
 		"prettier:all": "prettier --write **/*.{ts,tsx,js,scss,css,json,mdx}"
 	},
-	"dependencies": {
-		"react": "18.2.0",
-		"react-dom": "18.2.0"
-	},
+	"dependencies": {},
 	"devDependencies": {}
 }
