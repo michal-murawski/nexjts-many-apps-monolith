@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev -p 3001",
+		"dev": "next dev -p 3003",
 		"build": "next build && next export",
 		"build:analyze": "cross-env ANALYZE=true next build",
 		"start": "next start",
@@ -16,6 +16,7 @@
 	"dependencies": {
 		"components": "workspace:components@*",
 		"api": "workspace:api@*",
+		"styling": "workspace:styling@*",
 		"react": "npm:@preact/compat@17.1.1",
 		"react-dom": "npm:@preact/compat@17.1.1"
 	},

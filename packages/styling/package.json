@@ -1,0 +1,14 @@
+{
+	"name": "styling",
+	"version": "0.1.0",
+	"private": true,
+	"main": "src/index.tsx",
+	"scripts": {
+		"lint": "pnpm run lint:eslint & pnpm run lint:tsc",
+		"lint:eslint": "eslint . --ext .js,.ts,.tsx,.jsx --fix",
+		"lint:tsc": "tsc --noEmit",
+		"prettier:all": "prettier --write **/*.{ts,tsx,js,scss,css,json,mdx}"
+	},
+	"dependencies": {},
+	"devDependencies": {}
+}
